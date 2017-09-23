@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "1e489902-4ca7-48a3-896a-4fdb34da51b6",
+            "Value": {
+                "id": "c1309e12-5202-47fc-8501-2f987e0caf07",
+                "resourcePath": "objects\\Obj_Worldgen\\Obj_Worldgen.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "251372ef-96fa-42c8-99b0-5b7bf29fe5e2",
             "Value": {
                 "id": "146b7184-b225-4c86-b4f0-a5fb4c8a8dcb",
