@@ -119,6 +119,22 @@
             }
         },
         {
+            "Key": "797c5d71-77b6-45a2-a76e-7e0b4f34cf9f",
+            "Value": {
+                "id": "92f81360-f3bf-4da6-b4d1-a06534d6b175",
+                "resourcePath": "objects\\Obj_Click\\Obj_Click.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "7cc03b45-dd9e-41fe-9429-2f85a4452b29",
+            "Value": {
+                "id": "fb477b4f-28d7-49f5-840a-fab9de62002c",
+                "resourcePath": "objects\\Obj_Client\\Obj_Client.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "7d132619-25e7-45a6-98a6-859d7c30f47b",
             "Value": {
                 "id": "60f83905-8764-4025-859f-81f039f5f374",
