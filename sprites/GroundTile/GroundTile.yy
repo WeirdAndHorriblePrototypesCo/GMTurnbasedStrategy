@@ -53,8 +53,8 @@
             "visible": true
         }
     ],
-    "origin": 9,
-    "playbackSpeed": 0,
+    "origin": 0,
+    "playbackSpeed": 15,
     "playbackSpeedType": 0,
     "premultiplyAlpha": false,
     "sepmasks": false,
@@ -63,6 +63,6 @@
     "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
     "type": 0,
     "width": 64,
-    "xorig": 10,
-    "yorig": -114
+    "xorig": 0,
+    "yorig": 0
 }
