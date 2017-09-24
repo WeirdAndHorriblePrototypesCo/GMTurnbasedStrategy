@@ -1,4 +1,4 @@
-///VARIABLES
+ ///VARIABLES
 //Set the grid sizes. If you change it here, you change it everywhere.
 global.GridWidth		= 64;
 global.GridHeight		= 64;

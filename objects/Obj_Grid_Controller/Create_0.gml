@@ -9,9 +9,6 @@ var _TerrainType;
 var _X = 0;
 var _Y = 0; 
 var _id = 0;
-//Create the grid (This can be deleted if we end up not using the grid 't all.
-global.GroundGrid = ds_grid_create(global.WorldWidth,global.WorldHeight); 
-
 
 //Create tiles on every "space". Dont do this too often.
 repeat (array_length_2d(global.WorldArray,0)) {
