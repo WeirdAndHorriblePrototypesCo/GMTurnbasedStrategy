@@ -17,10 +17,22 @@ switch(_TypeEvent) {
 				break;
 				
 			case "Next Turn":
-				show_message("The next turn has started...")
+				show_debug_message("Next Turn")
 				break;
+			
+			case "Wind Direction":
+				var _Rounds = 0
+				var _Direction = buffer_read(Buffer,buffer_u32);
+				var _Speed = buffer_read(Buffer,buffer_u32);
+				repeat instance_number(Obj_Clouds) {
+					var _Target = instance_find(Obj_Clouds,_Rounds)
+					_Target.direction = _Direction
+					_Target.speed = _Speed
+					_Rounds+=1
+					}
+				break;
+				
+				
 			}
-			
-			
 		break;
 	}
