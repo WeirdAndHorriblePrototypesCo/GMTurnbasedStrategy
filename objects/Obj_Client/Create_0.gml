@@ -1,7 +1,7 @@
 /// @description Initialize the client
 
 var Type = network_socket_tcp;
-var Ip = "192.168.1.78"; //The server's ip needs to be filled in here.
+var Ip = "127.0.0.1"; //The server's ip needs to be filled in here.
 var Port = 8000;
 
 //Create a socket to send to the server.
