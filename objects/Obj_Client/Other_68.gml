@@ -15,6 +15,10 @@ switch(_TypeEvent) {
 				var _Y = buffer_read(Buffer, buffer_u32)
 				instance_create_depth(_X, _Y, -10 ,Obj_House)
 				break;
+				
+			case "Next Turn":
+				show_message("The next turn has started...")
+				break;
 			}
 			
 			
