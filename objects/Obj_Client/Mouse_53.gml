@@ -6,7 +6,7 @@ instance_create_depth(mouse_x,mouse_y,-10,Obj_Click)
 buffer_seek(Buffer, buffer_seek_start, 0);
 //u8 means Unsigned, that means that you cannot go below 0
 											//What the buffer will contain now is:
-buffer_write(Buffer, buffer_u8, 1);			//contains 1
+buffer_write(Buffer, buffer_string, "Click");			//contains 1
 buffer_write(Buffer, buffer_u32, mouse_x);	//contains 1, mousex(for example; 100)
 buffer_write(Buffer, buffer_u32, mouse_y);	//contains 1,mouse_x, mouse_y (for example 120)
 											//results in: 1,100,120
