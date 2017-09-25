@@ -31,5 +31,25 @@ if (point_in_rectangle(mouse_x,mouse_y,room_width/2-100,room_height/2+10,room_wi
 	Button1 = 0
 	}
 if (point_in_circle(mouse_x,mouse_y,room_width/2-20,room_height/2+80,25)) {
-	show_message("Send a packet to the server, login, go to the next room.")
+	var Name = ""
+	var Passw= ""
+	var _Rounds = 0
+	
+	repeat ds_list_size(Letters1) { 
+		Name+=string(ds_list_find_value(Letters1,_Rounds))
+		_Rounds+=1
+		}
+	_Rounds = 0
+	repeat ds_list_size(Letters2) {
+		Passw+=string(ds_list_find_value(Letters2,_Rounds))
+		_Rounds+=1
+		}
+	
+	buffer_seek(Buffer, buffer_seek_start, 0);
+	buffer_write(Buffer, buffer_string, "Login");
+	buffer_write(Buffer, buffer_string, Name);
+	buffer_write(Buffer, buffer_string, Passw);
+	network_send_packet(Socket, Buffer, buffer_tell(Buffer));
+	show_debug_message(Name)
+	show_debug_message(Passw)
 	}
