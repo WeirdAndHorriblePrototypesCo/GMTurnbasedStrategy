@@ -49,7 +49,6 @@ if (point_in_circle(mouse_x,mouse_y,room_width/2-20,room_height/2+80,25)) {
 	buffer_write(Buffer, buffer_string, "Login");
 	buffer_write(Buffer, buffer_string, Name);
 	buffer_write(Buffer, buffer_string, Passw);
+	buffer_write(Buffer, buffer_u32, global.PlayerNumber)
 	network_send_packet(Socket, Buffer, buffer_tell(Buffer));
-	show_debug_message(Name)
-	show_debug_message(Passw)
 	}
