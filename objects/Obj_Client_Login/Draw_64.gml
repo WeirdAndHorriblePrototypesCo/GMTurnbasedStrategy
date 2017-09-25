@@ -1,9 +1,9 @@
 /// @description Draw a button
 
 draw_set_font(noone)
-if DrawError == 0 {
+if DrawError != 0 {
 	DrawError-=1
-	draw_text_color(room_width/2-100,room_height/2-200,"Wrong username or password",c_red,c_red,c_red,c_red,1)
+	draw_text_color(room_width/2-140,room_height/2-60,"Wrong username or password",c_red,c_red,c_red,c_red,1)
 	}
 if Login == 0 {
 	draw_button(room_width/2-100,room_height/2-30,room_width/2+60,room_height/2-5,1)
@@ -14,7 +14,7 @@ if Login == 0 {
 
 if Login == 1 {
 	draw_set_color(c_white)
-	draw_text_color(room_width/2-80,room_height/2-60," Please login",c_white,c_white,c_white,c_white,1)
+	if DrawError == 0 { draw_text_color(room_width/2-80,room_height/2-60," Please login",c_white,c_white,c_white,c_white,1) }
 	draw_button(room_width/2-100,room_height/2-30,room_width/2+60,room_height/2-5,1)
 	draw_button(room_width/2-100,room_height/2+10,room_width/2+60,room_height/2+35,1)
 	draw_circle(room_width/2-20,room_height/2+80,25,0)
