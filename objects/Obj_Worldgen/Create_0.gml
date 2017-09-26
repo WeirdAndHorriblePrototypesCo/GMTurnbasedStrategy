@@ -3,7 +3,7 @@
 global.GridWidth		= 64;
 global.GridHeight		= 64;
 global.WorldSeed		= "Fire water burn";
-global.WorldArray		= [0,0];
+global.WorldArray		= array_3d_create(64,64,64);
 global.WorldWidth		= room_width/global.GridWidth;
 global.WorldHeight		= room_height/global.GridHeight;
 //Setting the world seed
@@ -11,6 +11,9 @@ random_set_seed(global.WorldSeed);
 //START CODE
 //Initialize the array.
 
+
+/*
+//Old 2d array system
 var _X = 0;
 var _Y = 0;
 repeat(global.WorldWidth){
@@ -22,6 +25,10 @@ repeat(global.WorldWidth){
 	_X+=1;
 }
 _X=0;
+*/
+
+
+
 
 
 	
