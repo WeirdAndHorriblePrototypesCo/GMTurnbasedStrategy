@@ -16,13 +16,17 @@ var _Alignment = 1;
 Buffer = buffer_create(_Size,_Type,_Alignment)
 
 if Connection < 0 { Login=0 }
-else { Login=1 }
+else { Login=3 }
 
 //Button settings.
 Button1 = 0
 Button2 = 0
+Button3 = 0
+Button4 = 0
 Letters1 = ds_list_create()
 Letters2 = ds_list_create()
+Letters3 = ds_list_create()
+Letters4 = ds_list_create()
 Nonsense = ds_list_create()
 var X = irandom(2)
 if X = 0 { ds_list_add(Nonsense,"M","O","O","O","O","O","V","E","A","L","O","N","G","!","!") }
@@ -31,3 +35,4 @@ if X = 2 { ds_list_add(Nonsense,"T","O","O","L","O","N","G","P","A","S","S","W",
 
 //Draw settings
 DrawError = 0 
+CreatedAccount = 0
