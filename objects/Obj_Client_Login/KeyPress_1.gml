@@ -1,6 +1,7 @@
  /// @description Take imput
 if keyboard_lastkey == 13 {
-	script_execute(Login_Script)
+	if Login == 1 { script_execute(login_password)  }
+	if Login == 4 { script_execute(login_connect) }
 	exit
 	}
 	
@@ -55,4 +56,15 @@ if Button4 == 1 {
 		exit
 		}
 	ds_list_add(Letters4,keyboard_lastchar)
+	}
+if Button5 == 1 {
+	if keyboard_lastkey == 9 {
+		exit
+		}
+	if keyboard_lastkey == 160 || keyboard_lastkey == 161 || keyboard_lastkey == 13 { exit; }
+	if keyboard_lastkey == 8 {
+		ds_list_delete(Letters5,ds_list_size(Letters5)-1)
+		exit
+		}
+	ds_list_add(Letters5,keyboard_lastchar)
 	}

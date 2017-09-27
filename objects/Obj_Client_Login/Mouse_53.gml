@@ -51,7 +51,13 @@ if Login == 3 {
 		}
 	}
 
+if Login == 4 {
+	if (point_in_circle(mouse_x,mouse_y,room_width/2-20,room_height/2+80,25)) {
+		script_execute(login_connect)
+		exit
+		}
+	}
 
-if (point_in_circle(mouse_x,mouse_y,room_width/2-20,room_height/2+80,25)) {
-	script_execute(Login_Script)
+if (point_in_circle(mouse_x,mouse_y,room_width/2-20,room_height/2+80,25)) && Login == 1 {
+	script_execute(login_password)
 	}
