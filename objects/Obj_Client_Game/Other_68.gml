@@ -17,7 +17,6 @@ switch(_TypeEvent) {
 				break;
 				
 			case "Next Turn":
-				show_debug_message("Next Turn")
 				break;
 			
 			case "Wind Direction":

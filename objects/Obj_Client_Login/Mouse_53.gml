@@ -2,23 +2,13 @@
 
 //Login == 0
 if (point_in_rectangle(mouse_x,mouse_y,room_width/2-100,room_height/2-30,room_width/2+60,room_height/2-5)) && Login == 0 {
-	var _Type = network_socket_tcp;
-	var _Ip = "127.0.0.1"; //The server's ip needs to be filled in here.
-	var _Port = 8000;
+	script_execute(login_connect)
+	}
 
-	//Create a socket to send to the server.
-	Socket = network_create_socket(_Type);
-	Connection = network_connect(Socket,_Ip,_Port);
-
-	//Create buffer to send data
-	var _Size = 1024;
-	var _Type = buffer_fixed;
-	var _Alignment = 1;
-	Buffer = buffer_create(_Size,_Type,_Alignment)
-	
-	//Results from trying to connect.
-	if Connection < 0 { Login=0 }
-	else { Login=1 }
+//If you username is too short, deny it from being chosen.
+if (point_in_circle(mouse_x,mouse_y,room_width/2-20,room_height/2+80,25)) && Login == 2 && ds_list_size(Letters3) < 4 {
+	DrawError2 = 60
+	exit
 	}
 
 //Login == 1
@@ -32,6 +22,7 @@ if Login == 1 {
 		Button1 = 0
 		}
 	}
+//Login == 2
 if Login == 2 {
 	if (point_in_rectangle(mouse_x,mouse_y,room_width/2-100,room_height/2-30,room_width/2+60,room_height/2-5)) {
 		Button3 = 1
@@ -42,6 +33,7 @@ if Login == 2 {
 		Button4 = 1
 		}
 	}
+//Login == 3
 if Login == 3 {
 	if (point_in_rectangle(mouse_x,mouse_y,room_width/2-100,room_height/2-30,room_width/2+60,room_height/2-5)) {
 		Login = 1
@@ -51,13 +43,17 @@ if Login == 3 {
 		}
 	}
 
+//Connect to the chosen server / ip
 if Login == 4 {
 	if (point_in_circle(mouse_x,mouse_y,room_width/2-20,room_height/2+80,25)) {
 		script_execute(login_connect)
 		exit
 		}
 	}
-
-if (point_in_circle(mouse_x,mouse_y,room_width/2-20,room_height/2+80,25)) && Login == 1 {
-	script_execute(login_password)
+	
+//Send your Username and Passw to the server to verify & Login.
+if (point_in_circle(mouse_x,mouse_y,room_width/2-20,room_height/2+80,25)) {
+	if Login == 1 || Login == 2 {
+		script_execute(login_password)
+		}
 	}

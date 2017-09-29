@@ -6,10 +6,18 @@ if DrawError != 0 {
 	if Login == 1 {
 		draw_text_color(room_width/2-140,room_height/2-60,"Wrong username or password",c_red,c_red,c_red,c_red,1) 
 		}
+	}
+if DrawError2 != 0 {
+	DrawError2-=1
+	if Login == 1 {
+		draw_text_color(room_width/2-140,room_height/2-60,"That user is already login",c_red,c_red,c_red,c_red,1) 
+		}
 	if Login == 2 {
-		draw_text_color(room_width/2-140,room_height/2-60,"Please pick a username and password that is longer than 4 characters!",c_red,c_red,c_red,c_red,1) 
+		draw_text_color(room_width/2-140,room_height/2-60,"That username is too short!",c_red,c_red,c_red,c_red,1) 
 		}
 	}
+
+
 if Login == 0 {
 	draw_button(room_width/2-100,room_height/2-30,room_width/2+60,room_height/2-5,1)
 	draw_text_color(room_width/2-155,room_height/2-80,"We are unable to connect you!",c_red,c_red,c_red,c_red,1)
@@ -20,7 +28,7 @@ if Login == 0 {
 if Login == 1 {
 //Start Login 1
 	draw_set_color(c_white)
-	if DrawError == 0 { draw_text_color(room_width/2-80,room_height/2-60," Please login",c_white,c_white,c_white,c_white,1) }
+	if DrawError == 0 && DrawError2 == 0 { draw_text_color(room_width/2-80,room_height/2-60," Please login",c_white,c_white,c_white,c_white,1) }
 	//Draw the login "buttons"
 	draw_button(room_width/2-100,room_height/2-30,room_width/2+60,room_height/2-5,1)
 	draw_button(room_width/2-100,room_height/2+10,room_width/2+60,room_height/2+35,1)
@@ -58,7 +66,7 @@ if Login == 1 {
 if Login == 2 {
 //Start Login 2
 	draw_set_color(c_white)
-	if DrawError == 0 { draw_text_color(room_width/2-120,room_height/2-60,"Select a name and login",c_white,c_white,c_white,c_white,1) }
+	if DrawError == 0 && DrawError2 == 0 { draw_text_color(room_width/2-120,room_height/2-60,"Select a name and login",c_white,c_white,c_white,c_white,1) }
 	draw_button(room_width/2-100,room_height/2-30,room_width/2+60,room_height/2-5,1)
 	draw_button(room_width/2-100,room_height/2+10,room_width/2+60,room_height/2+35,1)
 	draw_circle(room_width/2-20,room_height/2+80,25,0)

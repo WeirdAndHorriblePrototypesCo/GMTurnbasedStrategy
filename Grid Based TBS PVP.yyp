@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "0e13291c-112c-46fb-bb6f-9dfc8d69099b",
+            "Value": {
+                "id": "fc585f91-ae73-4d3f-bbb2-029988c3578d",
+                "resourcePath": "fonts\\Fn_Info_Small\\Fn_Info_Small.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "124fe5b3-0947-4c2e-800b-b110b57ee4e6",
             "Value": {
                 "id": "567cc0e4-df3f-41f1-be8e-8a3d22ef413e",
@@ -95,6 +103,14 @@
             }
         },
         {
+            "Key": "3d747aba-f1b5-4238-a19e-357cd06e4c35",
+            "Value": {
+                "id": "73775d32-9d3e-4c8b-b826-5bb149d302bd",
+                "resourcePath": "scripts\\place_house\\place_house.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "41f61c27-6316-4bc1-8a76-f201c9b6125d",
             "Value": {
                 "id": "d59496bc-5468-43ab-a07d-36661f50b823",
@@ -108,6 +124,22 @@
                 "id": "441cb6c7-2232-40e4-bd1c-903a4a32ac52",
                 "resourcePath": "views\\4a88ca2e-c317-4c91-90be-06770dbd6eec.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "4db83f2d-d01c-4434-8cf5-2c0facf65186",
+            "Value": {
+                "id": "0864f7d4-34ae-4b53-9d78-9458d77a9979",
+                "resourcePath": "fonts\\Fn_Info_Large\\Fn_Info_Large.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "4ebed3d5-3ff4-4d47-9cd2-cde4496bcef9",
+            "Value": {
+                "id": "f37343f7-bb08-4079-b481-fc90f49eafb1",
+                "resourcePath": "fonts\\Fn_Info_Medium\\Fn_Info_Medium.yy",
+                "resourceType": "GMFont"
             }
         },
         {
@@ -335,6 +367,14 @@
             }
         },
         {
+            "Key": "ec4b1833-64de-4ac2-8f95-ecc9af7db396",
+            "Value": {
+                "id": "1eeaf31d-c7b7-40b6-9953-0f774c77e8da",
+                "resourcePath": "views\\ec4b1833-64de-4ac2-8f95-ecc9af7db396.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "edee98fa-8e41-4418-8542-19a6328c5415",
             "Value": {
                 "id": "ed9edb99-c664-46ec-9683-accf3e93b9f3",
@@ -372,7 +412,8 @@
         "9e5c1000-d5d8-497a-a07a-c784c395303a",
         "08add12a-0a5b-4f29-8019-57e125d0f720",
         "d653a927-947d-453b-b44c-291c543926a8",
-        "2ddd6680-6498-4506-9c9a-80e37ab16e9c"
+        "2ddd6680-6498-4506-9c9a-80e37ab16e9c",
+        "3d747aba-f1b5-4238-a19e-357cd06e4c35"
     ],
     "tutorial": ""
 }

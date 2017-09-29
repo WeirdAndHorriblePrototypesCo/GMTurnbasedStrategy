@@ -1,10 +1,12 @@
  /// @description Take imput
 if keyboard_lastkey == 13 {
-	if Login == 1 { script_execute(login_password)  }
-	if Login == 4 { script_execute(login_connect) }
+	if Login == 1 { script_execute(login_password) }
+	if Login == 4 {	script_execute(login_connect) }
+	if Login == 2 && ds_list_size(Letters3) < 4 { DrawError2 = 60 }
+	if Login == 2 && ds_list_size(Letters3) > 3 { script_execute(login_password) }
 	exit
 	}
-	
+
 if Button1 == 1 {
 	if keyboard_lastkey == 9 {
 		Button1 = 0

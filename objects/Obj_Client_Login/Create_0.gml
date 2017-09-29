@@ -6,6 +6,7 @@
 //Login = 3 -> Connected Menu
 //Login = 4 -> No connection. Asked for an IP.
 
+global.LoggedIn=0
 Login = 4
 
 //Button settings.
@@ -27,4 +28,5 @@ if X = 2 { ds_list_add(Nonsense,"T","O","O","L","O","N","G","P","A","S","S","W",
 
 //Draw settings
 DrawError = 0 
+DrawError2 = 0
 CreatedAccount = 0

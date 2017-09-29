@@ -15,7 +15,14 @@ switch(_TypeEvent) {
 				DrawError = 120
 				break;
 			case "Login Success":
+				if global.LoggedIn = 1 {
+					break;
+					}
+				global.LoggedIn = 1
 				room_goto_next()
+				break;
+			case "User already login":
+				DrawError2 = 120
 				break;
 			}
 	}
