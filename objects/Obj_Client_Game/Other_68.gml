@@ -17,16 +17,20 @@ switch(_TypeEvent) {
 				break;
 				
 			case "Next Turn":
+				script_execute(next_turn)
 				break;
 			
 			case "Wind Direction":
 				var _Rounds = 0
-				var _Direction = buffer_read(Buffer,buffer_u32);
-				var _Speed = buffer_read(Buffer,buffer_u32);
+				var _Direction = buffer_read(Buffer,buffer_u16);
+				var _Speed = buffer_read(Buffer,buffer_u8);
+				var _Strength = buffer_read(Buffer,buffer_u8)/10;
+				
 				repeat instance_number(Obj_Clouds) {
 					var _Target = instance_find(Obj_Clouds,_Rounds)
-					_Target.direction = _Direction
-					_Target.speed = _Speed
+					_Target.Direction = _Direction
+					_Target.Speed = _Speed
+					_Target.Strength = _Strength
 					_Rounds+=1
 					}
 				break;

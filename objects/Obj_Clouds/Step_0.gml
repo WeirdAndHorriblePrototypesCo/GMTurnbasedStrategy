@@ -1,15 +1,24 @@
 /// @description Hide the cloud
 
-if irandom(2500) == 1 {
-	HideCloud = 350
-	}
-if HideCloud != 0 {
-	HideCloud-=1
-	image_alpha-=0.01
-	}
-if HideCloud == 0 && image_alpha != 1 && speed > 0.25 {
+if image_alpha < Strength && Speed != 0 {
 	image_alpha+=0.01
 	}
-if speed < 0.25 && image_alpha != 0 {
+if Speed == 0 && image_alpha != 0 || image_alpha > Strength {
 	image_alpha-=0.01
+	}
+
+if Move == 1 {
+	if Direction <= 90 {
+		x+=global.GridWidth*-floor(Speed)
+		}
+	if Direction <= 180 && Direction > 90 {
+		y+=global.GridHeight*-floor(Speed)
+		}
+	if Direction <= 270 && Direction > 180 {
+		x+=global.GridWidth*floor(Speed)
+		}
+	if Direction <= 360 && Direction > 270 {
+		y+=global.GridHeight*floor(Speed)
+		}
+	Move=0
 	}
