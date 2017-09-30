@@ -19,6 +19,11 @@ if HouseButton1 = 1 {
 	else if Inhabitants == 1 { draw_text(10,15,string("There is ")+string(Inhabitants)+string(" person living here.")); }
 	else if Inhabitants == 0 { draw_text(10,15,string("There is no one living here.")); }
 	
+	var _Rounds = 0
+	repeat Inhabitants {
+		draw_text(10,30+15*_Rounds,Inhabitant[_Rounds])
+		_Rounds+=1
+		}
 //Add button information.
 	draw_set_font(Fn_Info_Large)
 	draw_text(WportDraw-200,HportDraw-60,"Finish Inspection")

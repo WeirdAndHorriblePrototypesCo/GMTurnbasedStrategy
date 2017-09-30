@@ -1,0 +1,5 @@
+[General]
+Amount of names: 1
+
+[Names]
+N1=Henk

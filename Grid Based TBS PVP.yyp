@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "c01944b1-7722-46d1-b501-d645e8ee0396",
+            "Value": {
+                "id": "9d59ac13-1a04-4ae4-8296-2ad05ba41773",
+                "resourcePath": "datafiles_yy\\RandomNames.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "c9a110cf-cc3f-4195-85bd-911b5ff4b22e",
             "Value": {
                 "id": "fc827974-02c6-44fe-9252-707d06b5db1f",

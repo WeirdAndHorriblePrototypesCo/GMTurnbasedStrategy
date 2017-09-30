@@ -7,7 +7,8 @@ image_index=Image
 image_speed=0
 HouseButton1=0
 Inhabitants=irandom(12)
-
+Inhabitant[0] = ""
+alarm[0]=1
 //Button locations:
 Wport = view_wport[view_current]
 Hport = view_hport[view_current]
