@@ -22,6 +22,7 @@ repeat 1000 {
 	_Rounds+=1
 	_String=string("N")+string(_Rounds)
 	if !ini_key_exists("Names",_String) {
+		show_debug_message(_Rounds)
 		break;
 		}
 	} 

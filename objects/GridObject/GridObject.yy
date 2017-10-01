@@ -4,16 +4,7 @@
     "mvc": "1.0",
     "name": "GridObject",
     "eventList": [
-        {
-            "id": "85d152ba-7424-4d7c-97e1-0f76f4913ef0",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "3566e4aa-6962-4237-95f5-fdcdb5441baa"
-        }
+        
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
     "parentObjectId": "00000000-0000-0000-0000-000000000000",
