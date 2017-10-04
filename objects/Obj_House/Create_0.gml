@@ -17,3 +17,7 @@ Hport = view_hport[view_current]
 //from the "draw" section, they'll just refuse to work for some reason... o.O
 WportDraw = view_wport[view_current]
 HportDraw = view_hport[view_current]
+
+GainRounds=0
+NextTurn=0
+ShowGain=0

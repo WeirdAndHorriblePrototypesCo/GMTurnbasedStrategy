@@ -50,7 +50,7 @@ if Login == 4 {
 		exit
 		}
 	}
-	
+
 //Send your Username and Passw to the server to verify & Login.
 if (point_in_circle(mouse_x,mouse_y,room_width/2-20,room_height/2+80,25)) {
 	if Login == 1 || Login == 2 {

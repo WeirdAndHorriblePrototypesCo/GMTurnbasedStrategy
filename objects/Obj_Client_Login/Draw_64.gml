@@ -16,7 +16,12 @@ if DrawError2 != 0 {
 		draw_text_color(room_width/2-140,room_height/2-60,"That username is too short!",c_red,c_red,c_red,c_red,1) 
 		}
 	}
-
+if DrawError3 != 0 {
+    DrawError3-=1
+    if Login == 2 {
+        draw_text_color(room_width/2-140,room_height/2-60,"That name is already taken!",c_red,c_red,c_red,c_red,1) 
+		}
+    }
 
 if Login == 0 {
 	draw_button(room_width/2-100,room_height/2-30,room_width/2+60,room_height/2-5,1)

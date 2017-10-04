@@ -7,6 +7,7 @@ HportDraw = view_hport[view_current]
 if HouseButton1 = 1 {
 
 //setup Buttons
+	draw_set_color(c_black)
 	draw_set_alpha(0.75);
 	draw_roundrect(0,0,WportDraw,HportDraw,0); //Draw screen in darker tone.
 	draw_set_alpha(1);

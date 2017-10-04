@@ -1,5 +1,6 @@
 /// @description Create a random cloud.
 
+depth=-10000
 image_index = irandom(image_number)
 image_speed=0
 image_alpha=0

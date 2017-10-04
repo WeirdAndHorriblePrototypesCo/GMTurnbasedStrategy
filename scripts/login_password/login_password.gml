@@ -37,6 +37,7 @@ if Login == 1 { buffer_write(Buffer, buffer_string, "Login"); }
 if Login == 2 { buffer_write(Buffer, buffer_string, "Create Account"); }
 buffer_write(Buffer, buffer_string, Username);
 buffer_write(Buffer, buffer_string, _Password);
+if Login == 2 { buffer_write(Buffer, buffer_u16, async_load[? id]); }
 network_send_packet(Socket, Buffer, buffer_tell(Buffer));
 
 if Login == 2 {

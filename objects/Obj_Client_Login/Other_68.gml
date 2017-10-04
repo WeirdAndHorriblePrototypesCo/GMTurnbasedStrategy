@@ -19,10 +19,14 @@ switch(_TypeEvent) {
 					break;
 					}
 				global.LoggedIn = 1
+                global.Username = Username
 				room_goto_next()
 				break;
 			case "User already login":
 				DrawError2 = 120
 				break;
+            case "Username Taken":
+                DrawError3 = 120
+                break;
 			}
 	}

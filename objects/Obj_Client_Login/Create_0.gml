@@ -29,4 +29,5 @@ if X = 2 { ds_list_add(Nonsense,"T","O","O","L","O","N","G","P","A","S","S","W",
 //Draw settings
 DrawError = 0 
 DrawError2 = 0
+DrawError3 = 0
 CreatedAccount = 0
