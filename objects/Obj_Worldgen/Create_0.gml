@@ -6,6 +6,7 @@ global.WorldSeed		= "Fire water burn";
 global.WorldArray		= array_world_create(512,512,64);
 global.WorldWidth		= room_width/global.GridWidth;
 global.WorldHeight		= room_height/global.GridHeight;
+
 //Setting the world seed
 random_set_seed(global.WorldSeed);
 //START CODE
