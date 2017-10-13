@@ -71,10 +71,26 @@
             }
         },
         {
+            "Key": "249a7bca-bee5-4752-a124-8b5a2355f2be",
+            "Value": {
+                "id": "805cafe6-af72-4ad9-9590-c958f7ff314e",
+                "resourcePath": "tilesets\\Ts_Ground\\Ts_Ground.yy",
+                "resourceType": "GMTileSet"
+            }
+        },
+        {
             "Key": "251372ef-96fa-42c8-99b0-5b7bf29fe5e2",
             "Value": {
                 "id": "146b7184-b225-4c86-b4f0-a5fb4c8a8dcb",
                 "resourcePath": "views\\251372ef-96fa-42c8-99b0-5b7bf29fe5e2.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "2acd5dfe-7849-449d-abd3-d14373a3cb80",
+            "Value": {
+                "id": "f2c1c8f8-674f-42ae-91b5-0c3715f3611d",
+                "resourcePath": "views\\2acd5dfe-7849-449d-abd3-d14373a3cb80.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -159,6 +175,14 @@
             }
         },
         {
+            "Key": "7a219334-7687-42f2-96f1-bbc0a5f4b831",
+            "Value": {
+                "id": "935fcf9d-0ec8-4cf3-b3ad-946843629f81",
+                "resourcePath": "scripts\\array_world_get\\array_world_get.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7d132619-25e7-45a6-98a6-859d7c30f47b",
             "Value": {
                 "id": "60f83905-8764-4025-859f-81f039f5f374",
@@ -180,6 +204,14 @@
                 "id": "d9320c2d-f8f7-4290-8346-971279ab00ed",
                 "resourcePath": "fonts\\Fn_Lobby\\Fn_Lobby.yy",
                 "resourceType": "GMFont"
+            }
+        },
+        {
+            "Key": "880261a1-56c1-4934-b0fb-d378d4e304fc",
+            "Value": {
+                "id": "3ce06bc8-9a20-454a-bf31-5cf67a984b79",
+                "resourcePath": "tilesets\\Ts_world\\Ts_world.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
@@ -231,11 +263,27 @@
             }
         },
         {
+            "Key": "a498e2a1-e0e5-43b0-ba4e-c131c46422b1",
+            "Value": {
+                "id": "60220782-c296-4720-96a6-b1a170aae4cc",
+                "resourcePath": "scripts\\array_world_set\\array_world_set.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
             "Value": {
                 "id": "c9a1b05f-7d36-45e7-8f34-41ac5c118c0c",
                 "resourcePath": "options\\linux\\options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "ab516d6e-6893-46fc-bd29-682329384a17",
+            "Value": {
+                "id": "20873864-5ae4-4ef7-99f3-db16ed18f693",
+                "resourcePath": "sprites\\GroundTileset\\GroundTileset.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -319,6 +367,14 @@
             }
         },
         {
+            "Key": "e0a6a870-94ae-4d10-ac88-a13e9653439b",
+            "Value": {
+                "id": "df104f6a-0203-46d6-946e-0ba7d1b7808c",
+                "resourcePath": "scripts\\array_world_create\\array_world_create.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "edee98fa-8e41-4418-8542-19a6328c5415",
             "Value": {
                 "id": "ed9edb99-c664-46ec-9683-accf3e93b9f3",
@@ -354,7 +410,10 @@
     "script_order": [
         "a3d399bc-272b-47de-a064-3bb0377d98dd",
         "9e5c1000-d5d8-497a-a07a-c784c395303a",
-        "08add12a-0a5b-4f29-8019-57e125d0f720"
+        "08add12a-0a5b-4f29-8019-57e125d0f720",
+        "e0a6a870-94ae-4d10-ac88-a13e9653439b",
+        "a498e2a1-e0e5-43b0-ba4e-c131c46422b1",
+        "7a219334-7687-42f2-96f1-bbc0a5f4b831"
     ],
     "tutorial": ""
 }

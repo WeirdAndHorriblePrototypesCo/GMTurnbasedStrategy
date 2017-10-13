@@ -5,4 +5,4 @@ var out_array = argument[0],
     z1 = argument[3];
 
 var in_array = out_array[@ x1,y1];
-return in_array[@ z1];
+return in_array[@ 0,z1];

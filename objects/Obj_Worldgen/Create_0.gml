@@ -3,7 +3,7 @@
 global.GridWidth		= 64;
 global.GridHeight		= 64;
 global.WorldSeed		= "Fire water burn";
-global.WorldArray		= array_3d_create(64,64,64);
+global.WorldArray		= array_world_create(512,512,64);
 global.WorldWidth		= room_width/global.GridWidth;
 global.WorldHeight		= room_height/global.GridHeight;
 //Setting the world seed
