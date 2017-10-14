@@ -1,5 +1,10 @@
 /// @description Destroy the connection
 //Destroy the socket & buffer
-
-network_destroy(Socket);
-buffer_delete(Buffer);
+if Login = 0 {
+	exit;
+	}
+else {
+	network_destroy(Socket);
+	buffer_delete(Buffer);
+	exit;
+	}

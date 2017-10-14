@@ -5,7 +5,7 @@
     "name": "Obj_Camera",
     "eventList": [
         {
-            "id": "37bfa278-ba26-4730-8d8e-42f1ff1e3dc7",
+            "id": "286f9058-6e8f-4b29-bcc0-0e2666ab0a48",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "8e4c9bbf-1961-492b-a90c-9a22b4a275fa"
         },
         {
-            "id": "bd474932-dd67-4f56-8a90-4ee885962f64",
+            "id": "c1098d36-108b-4390-be90-c743a8680daf",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

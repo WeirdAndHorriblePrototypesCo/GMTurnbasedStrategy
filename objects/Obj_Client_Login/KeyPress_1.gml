@@ -1,32 +1,12 @@
  /// @description Take imput
 if keyboard_lastkey == 13 {
-	var Name = ""
-	var Passw= ""
-	var _Rounds = 0
-	repeat ds_list_size(Letters1) { 
-		Name+=string(ds_list_find_value(Letters1,_Rounds))
-		_Rounds+=1
-		}
-	
-	_Rounds = 0
-	repeat ds_list_size(Letters2) {
-		Passw+=string(ds_list_find_value(Letters2,_Rounds))
-		_Rounds+=1
-		}
-	var _Size = 1024;
-	var _Type = buffer_fixed;
-	var _Alignment = 1;
-	Buffer = buffer_create(_Size,_Type,_Alignment)
-	
-	buffer_seek(Buffer, buffer_seek_start, 0);
-	buffer_write(Buffer, buffer_string, "Login");
-	buffer_write(Buffer, buffer_string, Name);
-	buffer_write(Buffer, buffer_string, Passw);
-	buffer_write(Buffer, buffer_u32, global.PlayerNumber)
-	network_send_packet(Socket, Buffer, buffer_tell(Buffer));
+	if Login == 1 { script_execute(login_password) }
+	if Login == 4 {	script_execute(login_connect) }
+	if Login == 2 && ds_list_size(Letters3) < 4 { DrawError2 = 60 }
+	if Login == 2 && ds_list_size(Letters3) > 3 { script_execute(login_password) }
 	exit
 	}
-	
+
 if Button1 == 1 {
 	if keyboard_lastkey == 9 {
 		Button1 = 0
@@ -53,4 +33,40 @@ if Button2 == 1 {
 		}
 	ds_list_add(Letters2,keyboard_lastchar)
 	}
-
+if Button3 == 1 {
+	if keyboard_lastkey == 9 {
+		Button3 = 0
+		Button4 = 1
+		exit
+		}
+	if keyboard_lastkey == 160 || keyboard_lastkey == 161 || keyboard_lastkey == 13 { exit; }
+	if keyboard_lastkey == 8 {
+		ds_list_delete(Letters3,ds_list_size(Letters3)-1)
+		exit
+		}
+	ds_list_add(Letters3,keyboard_lastchar)
+	}
+if Button4 == 1 {
+	if keyboard_lastkey == 9 {
+		Button3 = 1
+		Button4 = 0
+		exit
+		}
+	if keyboard_lastkey == 160 || keyboard_lastkey == 161 || keyboard_lastkey == 13 { exit; }
+	if keyboard_lastkey == 8 {
+		ds_list_delete(Letters4,ds_list_size(Letters4)-1)
+		exit
+		}
+	ds_list_add(Letters4,keyboard_lastchar)
+	}
+if Button5 == 1 {
+	if keyboard_lastkey == 9 {
+		exit
+		}
+	if keyboard_lastkey == 160 || keyboard_lastkey == 161 || keyboard_lastkey == 13 { exit; }
+	if keyboard_lastkey == 8 {
+		ds_list_delete(Letters5,ds_list_size(Letters5)-1)
+		exit
+		}
+	ds_list_add(Letters5,keyboard_lastchar)
+	}

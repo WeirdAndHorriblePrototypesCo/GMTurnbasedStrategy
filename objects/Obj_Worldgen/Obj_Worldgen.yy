@@ -5,7 +5,7 @@
     "name": "Obj_Worldgen",
     "eventList": [
         {
-            "id": "958fbb21-40b0-4626-a795-632e94055033",
+            "id": "5ca748e4-fc9c-4eec-a33e-e533fb800db2",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,

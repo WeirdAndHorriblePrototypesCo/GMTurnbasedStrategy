@@ -5,7 +5,7 @@
     "name": "Obj_Click",
     "eventList": [
         {
-            "id": "e3e52b6e-5af6-4ad9-bb7d-15edc00e9ee8",
+            "id": "7dc25173-5cbc-4117-a921-ca9029d73a98",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
