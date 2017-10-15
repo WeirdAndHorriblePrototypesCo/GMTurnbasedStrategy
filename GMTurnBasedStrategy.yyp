@@ -231,6 +231,14 @@
             }
         },
         {
+            "Key": "70e7fbd1-acb3-454b-9157-303efe6623c9",
+            "Value": {
+                "id": "b755a3f9-7bc0-4ec0-81b6-fa1e7d35e536",
+                "resourcePath": "datafiles_yy\\WorldLayers.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "79102790-583c-4416-94fa-3529e2e11b7f",
             "Value": {
                 "id": "12d03650-9d2e-4b0d-aafa-e2b387c810cf",
