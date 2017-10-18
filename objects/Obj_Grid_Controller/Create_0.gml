@@ -16,14 +16,14 @@ var _Y = 0;
 
 //Init Tilemap
 var tileLayer = layer_create(10);
-var tileMap = layer_tilemap_create(tileLayer,0,0,Ts_Ground,room_width,room_height);
+var tileMap = layer_tilemap_create(tileLayer,0,0,Ts_Ground,global.WorldWidth,global.WorldHeight);
 
 
 
 //Magic numbers are in use now. Find a way to get the correct size later.
 
-repeat (512) {
-	repeat (512) {
+repeat (global.WorldWidth) {
+	repeat (global.WorldHeight) {
 		
 		_TerrainType = array_world_get(global.WorldArray,_X,_Y,1);
 		

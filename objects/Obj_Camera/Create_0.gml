@@ -5,6 +5,15 @@ z = -10;
 viewWidth = 640;
 viewHeight = 480;
 
+//MouseDrag Vars
+Xmouse = 0;
+Ymouse = 0;
+//Old vars
+//_Xdiff = 0;
+//_Ydiff = 0;
+/////////////////
+
+
 //Set-up view matrix
 var vm = matrix_build_lookat(x,y,-10,x,y,0,0,1,0);
 //Set-up projection matrix

@@ -3,17 +3,16 @@
 global.GridWidth		= 64; //size of every square
 global.GridHeight		= 64;
 global.WorldSeed		= "Fire water burn";
-global.WorldArray		= array_world_create(512,512,64);
-global.WorldWidth		= room_width/global.GridWidth;
-global.WorldHeight		= room_height/global.GridHeight;
-
+global.WorldWidth		= 512;
+global.WorldHeight		= 512;
+global.WorldArray		= array_world_create(global.WorldWidth,global.WorldHeight,64);
+room_width				= global.GridWidth * global.WorldWidth;
+room_height				= global.GridHeight * global.WorldHeight;
 //Setting the world seed
 random_set_seed(global.WorldSeed);
 //START CODE
 //Initialize the array.
 
-
-room_width = 
 
 
 

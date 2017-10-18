@@ -4,7 +4,7 @@ repeat ds_list_size(Letters5) {
 	_Ip+=string(ds_list_find_value(Letters5,_Rounds))
 	_Rounds+=1
 	}
-
+if _Ip == 0 {_Ip = "127.0.0.1"};
 var _Type = network_socket_tcp;
 var _Port = 8000;
 
