@@ -1,6 +1,6 @@
  ///VARIABLES
 //Set the grid sizes. If you change it here, you change it everywhere.
-global.GridWidth		= 64;
+global.GridWidth		= 64; //size of every square
 global.GridHeight		= 64;
 global.WorldSeed		= "Fire water burn";
 global.WorldArray		= array_world_create(512,512,64);
@@ -11,6 +11,15 @@ global.WorldHeight		= room_height/global.GridHeight;
 random_set_seed(global.WorldSeed);
 //START CODE
 //Initialize the array.
+
+
+room_width = 
+
+
+
+
+
+
 
 
 /*
