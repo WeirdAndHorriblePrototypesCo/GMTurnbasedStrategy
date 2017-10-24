@@ -3,18 +3,25 @@
 //Zoom out 
 
 if (mouse_wheel_down()){
-viewWidth+=128;
-viewHeight+=96;
+Wto+=128+(40*viewWidth/640);
+Hto+=96+(30*viewWidth/480);
+//viewWidth+=128;
+//viewHeight+=96;
 }
 //Zoom in, but not too far
-if (mouse_wheel_up() && viewWidth > 640){
-viewWidth-=128;
-viewHeight-=96;
+if (mouse_wheel_up() && viewWidth > 640 && Wto > 640){
+Wto-=128+(40*viewWidth/640);
+Hto-=96+(30*viewWidth/480);
+//viewWidth-=128;
+//viewHeight-=96;
 }
 //Reset view
 if (mouse_check_button(mb_middle)){
 viewWidth=640;
 viewHeight=480;
+Wto=640;
+Hto=480;
+
 }
 
 // Get mouse position when holding for mouse camera drag
@@ -26,8 +33,8 @@ Ymouse = mouse_y;
 // Move camera according to mouse drag
 if mouse_check_button(mb_left) {	//The jank is real, this messes up the rendering of the tiles big time. It is nice to use though, so fuck it.
 	 
-	x = Xmouse - (mouse_x - x);
-	y = Ymouse - (mouse_y - y);
+	Xto = Xmouse - (mouse_x - x);
+	Yto = Ymouse - (mouse_y - y);
 	/*
 	_Xdiff = mouse_x - Xmouse;
 	_Ydiff = mouse_y - Ymouse;
@@ -40,34 +47,34 @@ if mouse_check_button(mb_left) {	//The jank is real, this messes up the renderin
 if (keyboard_check(vk_up) || keyboard_check(ord("W"))){
 	
 	if(keyboard_check(vk_shift)){
-	y-=camera_speed*5;
+	Yto-=camera_speed*5*(viewWidth/640);
 	}
 	else{
-	y-=camera_speed;
+	Yto-=camera_speed*(viewWidth/640);
 	}
 }
 if (keyboard_check(vk_left) || keyboard_check(ord("A"))){
 	if(keyboard_check(vk_shift)){
-	x-=camera_speed*5;
+	Xto-=camera_speed*5*(viewWidth/640);
 	}
 	else{
-	x-=camera_speed;
+	Xto-=camera_speed*(viewWidth/640);
 	}
 }
 if (keyboard_check(vk_down) || keyboard_check(ord("S"))){
 	if(keyboard_check(vk_shift)){
-	y+=camera_speed*5;
+	Yto+=camera_speed*5*(viewWidth/640);
 	}
 	else{
-	y+=camera_speed;
+	Yto+=camera_speed*(viewWidth/640);
 	}
 }
 if (keyboard_check(vk_right) || keyboard_check(ord("D"))){
 	if(keyboard_check(vk_shift)){
-	x+=camera_speed*5;
+	Xto+=camera_speed*5*(viewWidth/640);
 	}
 	else{
-	x+=camera_speed;
+	Xto+=camera_speed*(viewWidth/640);
 	}
 }
 
@@ -77,6 +84,15 @@ if (keyboard_check(vk_right) || keyboard_check(ord("D"))){
 //y= max(y, viewHeight/2);
 //clamp(x, 0, room_width - viewWidth);
 //clamp(y, 0, room_height - viewHeight);
+if (Wto < 640){
+
+Wto = 640;
+Hto = 480;
+}
+x+= (Xto -x)/25;
+y+= (Yto -y)/25;
+viewWidth+= (Wto -viewWidth)/25;
+viewHeight+= (Hto -viewHeight)/25;
 
 // Apply the changed x and y values to the camera matrix
 var vm = matrix_build_lookat(x,y,-10,x,y,0,0,1,0);

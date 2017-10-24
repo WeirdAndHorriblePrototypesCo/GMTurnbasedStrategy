@@ -5,6 +5,10 @@ z = -10;
 viewWidth = 640;
 viewHeight = 480;
 
+Xto = x;
+Yto = y;
+Wto = viewWidth;
+Hto = viewHeight;
 //MouseDrag Vars
 Xmouse = 0;
 Ymouse = 0;
