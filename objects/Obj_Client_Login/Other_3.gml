@@ -1,6 +1,6 @@
 /// @description Destroy the connection
 //Destroy the socket & buffer
-if Login = 0 {
+if Login = 0 || Login = 4 {
 	exit;
 	}
 else {

@@ -13,29 +13,32 @@ switch(_TypeEvent) {
 			case "House":
 				var _X = buffer_read(Buffer, buffer_u32)
 				var _Y = buffer_read(Buffer, buffer_u32)
-				instance_create_depth(_X, _Y, -10 ,Obj_House)
+				var _Building = instance_create_depth(_X, _Y, -10 ,Obj_House)
+                _Building.Owner = buffer_read(Buffer, buffer_string);
 				break;
 			case "Small Building":
 				var _X = buffer_read(Buffer, buffer_u32)
 				var _Y = buffer_read(Buffer, buffer_u32)
 				var _Building = instance_create_depth(_X, _Y, -10 ,Obj_Production_Building)
+                var _Owner = buffer_read(Buffer, buffer_string)
                 var _Type = buffer_read(Buffer,buffer_string)
                 _Building.Type = _Type
+                _Building.Owner = _Owner
 				break;
 			case "Next Turn":
 				script_execute(next_turn)
 				break;
 			case "Login Resources":
-				global.Planks = buffer_read(Buffer, buffer_u16)
-				global.Food = buffer_read(Buffer, buffer_u16)
-				global.Stone = buffer_read(Buffer, buffer_u16)
-				global.Workers = buffer_read(Buffer, buffer_u16)
+				global.Planks = buffer_read(Buffer, buffer_u32)
+				global.Food = buffer_read(Buffer, buffer_u32)
+				global.Stone = buffer_read(Buffer, buffer_u32)
+				global.Workers = buffer_read(Buffer, buffer_u32)
 				break;
             case "Resources Gained":
                 if global.Username == buffer_read(Buffer,buffer_string) {
-                    global.Planks=buffer_read(Buffer,buffer_u16)
-                    global.Food=buffer_read(Buffer,buffer_u16)
-                    global.Stone=buffer_read(Buffer,buffer_u16)
+                    global.Planks=buffer_read(Buffer,buffer_u32)
+                    global.Food=buffer_read(Buffer,buffer_u32)
+                    global.Stone=buffer_read(Buffer,buffer_u32)
                     break;
                     }
 			case "Wind Direction":
@@ -52,8 +55,26 @@ switch(_TypeEvent) {
 					_Rounds+=1
 					}
 				break;
-				
-				
+			case "Cheat, Give Planks":
+                if global.Username == buffer_read(Buffer, buffer_string) {
+                    global.Planks+=buffer_read(Buffer, buffer_u32)
+                    }
+                break;
+			case "Cheat, Give Food":
+                if global.Username == buffer_read(Buffer, buffer_string) {
+                    global.Food+=buffer_read(Buffer, buffer_u32)
+                    }
+                break;
+            case "Cheat, Give Stone":
+                if global.Username == buffer_read(Buffer, buffer_string) {
+                    global.Stone+=buffer_read(Buffer, buffer_u32)
+                    }
+                break;
+            case "Cheat, Give Workers":
+                if global.Username == buffer_read(Buffer, buffer_string) {
+                    global.Workers+=buffer_read(Buffer, buffer_u32)
+                    }
+                break;
 			}
 		break;
 	}

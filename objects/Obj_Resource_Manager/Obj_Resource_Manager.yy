@@ -5,7 +5,7 @@
     "name": "Obj_Resource_Manager",
     "eventList": [
         {
-            "id": "c9d4a37f-7ff2-42bd-b0d0-055223ef77a3",
+            "id": "7c3e5156-2b6d-4d03-be8a-5ff35f95f47e",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "9b199be7-0b9d-439a-99a8-303f6a1248cb"
         },
         {
-            "id": "81dd8476-6c84-488f-b3c1-847e35890350",
+            "id": "48e617ed-647a-4645-8959-e4aaf5c2f65c",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "9b199be7-0b9d-439a-99a8-303f6a1248cb"
         },
         {
-            "id": "483e7900-dacc-447e-9b79-7727150f4cc1",
+            "id": "5271a812-99c9-4bfd-a6e0-12be15328549",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -35,7 +35,7 @@
             "m_owner": "9b199be7-0b9d-439a-99a8-303f6a1248cb"
         },
         {
-            "id": "2bb5aa15-3714-40df-9aba-0a019418105e",
+            "id": "70666f2a-5fce-4651-b862-e513c1a36b03",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -45,7 +45,7 @@
             "m_owner": "9b199be7-0b9d-439a-99a8-303f6a1248cb"
         },
         {
-            "id": "c15c42f2-0237-4bdf-9473-163f282ce03c",
+            "id": "c0d13466-6644-49f9-b904-efddbe93ad01",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -55,13 +55,13 @@
             "m_owner": "9b199be7-0b9d-439a-99a8-303f6a1248cb"
         },
         {
-            "id": "20282f6c-db0b-466f-bcf7-07678e64a795",
+            "id": "beb9e199-9bd8-4cb6-9500-e0b22143ab28",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 51,
-            "eventtype": 9,
+            "enumb": 0,
+            "eventtype": 2,
             "m_owner": "9b199be7-0b9d-439a-99a8-303f6a1248cb"
         }
     ],

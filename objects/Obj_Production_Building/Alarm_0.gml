@@ -4,7 +4,8 @@ if Type == "Farm" {
     sprite_index=Spr_Farm
     }
 if Type == "Mine" {
-    sprite_index=Spr_Clouds
+    sprite_index=Spr_Mine
+    image_speed=2
     }
 if Type == "Lumberjack" {
     sprite_index=Spr_Clouds

@@ -1,5 +1,5 @@
 [General]
-Amount_of_names=1
+AmountOfNames=100
 
 [Names]
 N0="Piet"

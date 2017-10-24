@@ -27,7 +27,7 @@ Ymouse = mouse_y;
 if mouse_check_button(mb_left) {	//The jank is real, this messes up the rendering of the tiles big time. It is nice to use though, so fuck it.
 	 
 	x = Xmouse - (mouse_x - x);
-	y = Ymouse - (mouse_y - x);
+	y = Ymouse - (mouse_y - y);
 	/*
 	_Xdiff = mouse_x - Xmouse;
 	_Ydiff = mouse_y - Ymouse;

@@ -18,16 +18,25 @@ if DrawError2 != 0 {
 	}
 if DrawError3 != 0 {
     DrawError3-=1
-    if Login == 2 {
+    if Login == 2 || Login == 3 {
         draw_text_color(room_width/2-140,room_height/2-60,"That name is already taken!",c_red,c_red,c_red,c_red,1) 
 		}
     }
-
+if DrawError4 != 0 {
+    DrawError4-=1
+    if Login == 4 {
+        draw_text_color(room_width/2-90,room_height/2-60,"Outdated client",c_red,c_red,c_red,c_red,1) 
+        draw_text_color(room_width/2-110,room_height/2-40,"please update first!",c_red,c_red,c_red,c_red,1)
+        }
+    }
 if Login == 0 {
+    draw_set_color(c_white)
 	draw_button(room_width/2-100,room_height/2-30,room_width/2+60,room_height/2-5,1)
+    draw_button(room_width/2-100,room_height/2,room_width/2+60,room_height/2+25,1)
 	draw_text_color(room_width/2-155,room_height/2-80,"We are unable to connect you!",c_red,c_red,c_red,c_red,1)
 	draw_text_color(room_width/2-175,room_height/2-55,"Please press the button to try again.",c_red,c_red,c_red,c_red,1)
 	draw_text_color(room_width/2-40,room_height/2-30,"Retry",c_black,c_black,c_black,c_black,1)
+    draw_text_color(room_width/2-75,room_height/2,"Different IP",c_black,c_black,c_black,c_black,1)
 	}
 
 if Login == 1 {
@@ -119,9 +128,11 @@ if Login == 3 {
 
 if Login == 4 {
 	draw_button(room_width/2-100,room_height/2-10,room_width/2+60,room_height/2+15,1)
-	draw_text(room_width/2-150,room_height/2-50,"  Please type the ip of the")
-	draw_text(room_width/2-150,room_height/2-35,"server you wish to connect to")
-	draw_circle(room_width/2-20,room_height/2+80,25,0)
+    if DrawError4 == 0 {
+    	draw_text(room_width/2-150,room_height/2-50,"  Please type the ip of the")
+    	draw_text(room_width/2-150,room_height/2-35,"server you wish to connect to")
+        }
+    draw_circle(room_width/2-20,room_height/2+80,25,0)
 	draw_set_color(c_black)
 	draw_arrow(room_width/2-35,room_height/2+80,room_width/2,room_height/2+80,70)
 	

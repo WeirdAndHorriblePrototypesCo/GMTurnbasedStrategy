@@ -5,7 +5,7 @@
     "name": "Obj_Clouds",
     "eventList": [
         {
-            "id": "a201689a-00f3-4e1e-96c3-48c0c47c1b3d",
+            "id": "0ba1bffc-410c-48dc-bd9b-255009032405",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "b4f945ce-cab6-48bd-847b-c066c4af9d90"
         },
         {
-            "id": "05f73fd5-dac2-4b3c-9226-15b6a235819c",
+            "id": "b151ad74-cd83-42f7-82ce-ca3c1799f18f",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "b4f945ce-cab6-48bd-847b-c066c4af9d90"
         },
         {
-            "id": "9bb1e114-70cf-42c0-bc9b-875147b2b4f0",
+            "id": "f9eac1b3-d265-4aa4-9da6-3dbbae023043",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -51,6 +51,6 @@
     "physicsShapePoints": null,
     "physicsStartAwake": true,
     "solid": false,
-    "spriteId": "83352206-06e3-4d64-8f7a-bcbac555ae77",
+    "spriteId": "68f46111-5326-4289-8a52-176d0e49938d",
     "visible": true
 }

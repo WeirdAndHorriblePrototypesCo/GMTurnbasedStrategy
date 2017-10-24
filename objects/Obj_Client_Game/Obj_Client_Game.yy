@@ -5,7 +5,7 @@
     "name": "Obj_Client_Game",
     "eventList": [
         {
-            "id": "f5e1dd3d-e467-4da7-8b4a-d26d419e2a71",
+            "id": "8af2eb95-2895-4536-8a03-1c7044b6873c",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -15,7 +15,7 @@
             "m_owner": "840cd281-2fb2-4da7-88aa-c2c580071b05"
         },
         {
-            "id": "44a17dd5-1057-4b96-9bb2-99fb4a76cc4f",
+            "id": "25ee24fa-161a-4634-aba3-b1e156624660",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -25,7 +25,7 @@
             "m_owner": "840cd281-2fb2-4da7-88aa-c2c580071b05"
         },
         {
-            "id": "e70ad7ee-46ea-4214-b267-34d941f494d1",
+            "id": "1bb9cdbf-6147-4d39-8108-ad0ec1531e00",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -35,7 +35,7 @@
             "m_owner": "840cd281-2fb2-4da7-88aa-c2c580071b05"
         },
         {
-            "id": "c516fa7b-bed6-4f8a-bc5b-896726647598",
+            "id": "c0f0e746-8cb2-487e-8ec4-3cedc668c1fd",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
@@ -45,7 +45,7 @@
             "m_owner": "840cd281-2fb2-4da7-88aa-c2c580071b05"
         },
         {
-            "id": "0f8d6029-8faa-4498-b74f-d639e8592750",
+            "id": "5d151703-b379-4544-ac52-70ab2deef9e2",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
