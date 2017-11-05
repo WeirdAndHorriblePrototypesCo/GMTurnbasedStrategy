@@ -13,7 +13,6 @@ if PlaceType != "" {
         
         // If you keep shift pressed, you can place multiple buildings.
         var _Shift = ""
-        show_debug_message(keyboard_check(vk_shift))
         if keyboard_check(vk_shift) {
             _Shift = PlaceType
             }

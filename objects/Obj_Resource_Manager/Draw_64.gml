@@ -86,7 +86,7 @@ if Menu == "Building Selection" {
     repeat 30 {
         if point_in_rectangle(device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),ViewW-(220-_X*(_ImageSize+5)),ViewH-185+(_Y*(_ImageSize+5)),ViewW-(220-_X*(_ImageSize+5))+34,ViewH-185+(_Y*(_ImageSize+5))+34) {
             //PlaceType = ds_map_find_value(global.Buildings, _Rounds)
-            var _String = global.Buildings[_Rounds]
+            var _String = global.Buildings[_Rounds+SelectedMenu*30]
             PlankCost = ds_map_find_value(_String,"Planks")
             FoodCost = ds_map_find_value(_String,"Food")
             StoneCost = ds_map_find_value(_String,"Stone")
@@ -109,11 +109,10 @@ if Menu == "Building Selection" {
     
     //((Change the building settings))
     _Rounds=0
-    show_debug_message(device_mouse_x_to_gui(0))
-    show_debug_message(ViewW-275)
     repeat 8 {
         if point_in_rectangle(device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),ViewW-275,ViewH-22.5-25*_Rounds,ViewW-230,ViewH-2.5-25*_Rounds) {
             SelectedMenu=_Rounds
+            show_debug_message(_Rounds)
             }
         _Rounds+=1
         }
@@ -127,7 +126,7 @@ if Menu == "Building Selection" {
     //Find the building you clicked on and add it to your mouse so you can place them.
     repeat 30 {
         if point_in_rectangle(device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),ViewW-(220-_X*(_ImageSize+5)),ViewH-185+(_Y*(_ImageSize+5)),ViewW-(220-_X*(_ImageSize+5))+34,ViewH-185+(_Y*(_ImageSize+5))+34) && mouse_check_button(mb_left){
-            PlaceType = ds_map_find_value(global.Buildings[_Rounds], "Name")
+            PlaceType = ds_map_find_value(global.Buildings[_Rounds+SelectedMenu*30], "Name")
             }
         _X+=1
         if _X == 6 {

@@ -10,6 +10,7 @@ network_send_packet(Socket, Buffer, buffer_tell(Buffer));
 
 //General Client Settings
 global.MenuOpen = 0
+global.LoadingVisible=0
 
 /////////////////////////////////////////////
 /////// List of random names ////////////////
@@ -30,19 +31,16 @@ ini_close()
 
 //////////////////////////////////////////////////
 ///////// Map of all building names //////////////
+
+//This thing creates MAPs in MAPS.
+// It first generates the "Buildings" part, and then seperately generates subtypes for each building
+// in there.
 global.Buildings = ds_map_create()
 ini_open(working_directory+"Buildings.txt")
 var _Rounds = 0
 var _String = ""
-_String=string("N")+string(_Rounds)
-repeat ini_read_real("General","AmountOfRepeats",0) {
-    ds_map_add(global.Buildings, _Rounds, ini_read_string("Buildings",_String,"Error!"))
-    _Rounds+=1
-    _String=string("N")+string(_Rounds)
-    }
-
-var _Rounds=0
-repeat ini_read_real("General","AmountOfRepeats",0) {
+repeat 300 { //The magic number 300 is the amount of buildings that fit into the menu. 5*6 for each screen
+// times 8 for the catagories.
     var _Building = string("Building")+string(_Rounds)
     var _String = ini_read_string(_Building,"Name","Error!")
     global.Buildings[_Rounds] = ds_map_create()
