@@ -112,7 +112,6 @@ if Menu == "Building Selection" {
     repeat 8 {
         if point_in_rectangle(device_mouse_x_to_gui(0),device_mouse_y_to_gui(0),ViewW-275,ViewH-22.5-25*_Rounds,ViewW-230,ViewH-2.5-25*_Rounds) {
             SelectedMenu=_Rounds
-            show_debug_message(_Rounds)
             }
         _Rounds+=1
         }
