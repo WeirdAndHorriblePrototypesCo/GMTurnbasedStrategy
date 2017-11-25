@@ -1,11 +1,13 @@
 [General]
-AmountOfRepeats=4
+AmountOfRepeats=5
+AmountOfUpgrades=2
 
 [Buildings]
 N0="House"
 N1="Farm"
 N2="Windmill"
 N3="Mine"
+N4="Well"
 
 [Building0]
 Name="House"
@@ -13,6 +15,13 @@ Planks=0
 Food=1
 Stone=2
 Workers=0
+MaxTier=2
+Sprite="Spr_House_T1"
+ResourceType="Workers"
+ResourceAmount=1
+MaxLoading=1
+LayerNumber=1
+ObjectType="Obj_House"
 
 [Building1]
 Name="Farm"
@@ -20,6 +29,13 @@ Planks=5
 Food=0
 Stone=1
 Workers=0
+MaxTier=2
+Sprite="Spr_Farm_T1"
+ResourceType="Food"
+ResourceAmount=1
+MaxLoading=1
+LayerNumber=2
+ObjectType="Obj_Production_Building"
 
 [Building2]
 Name="Windmill"
@@ -27,6 +43,13 @@ Planks=5000000
 Food=0
 Stone=0
 Workers=0
+MaxTier=1
+Sprite="Spr_Windmill_T1"
+ResourceType="Food"
+ResourceAmount=5
+MaxLoading=3
+LayerNumber=3
+ObjectType="Obj_Production_Building"
 
 [Building3]
 Name="Mine"
@@ -34,3 +57,50 @@ Planks=3
 Food=5
 Stone=0
 Workers=0
+MaxTier=1
+Sprite="Spr_Mine_T1"
+ResourceType="Stone"
+ResourceAmount=2
+MaxLoading=3
+LayerNumber=4
+ObjectType="Obj_Production_Building"
+
+[Building4]
+Name="Well"
+Planks=2
+Food=0
+Stone=2
+Workers=0
+MaxTier=1
+Sprite="Spr_Well_T1"
+ResourceType="Workers"
+ResourceAmount=2
+MaxLoading=8
+LayerNumber=7
+ObjectType="Obj_Production_Building"
+
+[Building-Upgrade0]
+Name="House_T2"
+Planks=20
+Food=5
+Stone=10
+Workers=3
+Sprite="Spr_House_T2"
+ResourceType="Workers"
+ResourceAmount=3
+MaxLoading=3
+LayerNumber=5
+ObjectType="Obj_House"
+
+[Building-Upgrade1]
+Name="Farm_T2"
+Planks=2
+Food=2
+Stone=2
+Workers=2
+Sprite="Spr_Windmill_T1"
+ResourceType="Food"
+ResourceAmount=3
+MaxLoading=1
+LayerNumber=6
+ObjectType="Obj_Production_Building"

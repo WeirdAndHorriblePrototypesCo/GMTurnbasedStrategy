@@ -10,17 +10,27 @@ var ViewH = view_hport[view_current];
 if Menu == "Building Selection" {
     //Draw the bottom of the screen black.
     draw_set_color(c_black)
-    draw_rectangle(0,ViewH,ViewW,ViewH-200,0)
+    //draw_rectangle(0,ViewH,ViewW,ViewH-200,0)
+    draw_sprite(Spr_Menu_Large,0,250,ViewH-205)
+    draw_sprite(Spr_Menu_Med,0,0,ViewH-205)
+    draw_sprite(Spr_Menu_Med,0,730,ViewH-205)
     
     //Draw the left and right side of the menu screen.
     draw_set_color(c_gray)
-    draw_rectangle(ViewW,ViewH,ViewW-280,ViewH-200,0) //Right
-    draw_rectangle(200,ViewH,0,ViewH-200,0)             //Left
+    //
+    //draw_rectangle(ViewW,ViewH,ViewW-280,ViewH-200,0) //Right
+    //draw_rectangle(200,ViewH,0,ViewH-200,0)             //Left
     
     //Load menu is a little slower than start game. This is to prevent crashing if your internet is sloowwwwpokkkkeeeee ;)
+    if LoadMenu == 0 {
+        draw_sprite_stretched(Spr_MenuLoading,MenuLoadingImage,ViewW/2-sprite_get_width(Spr_MenuLoading),ViewH/2-sprite_get_height(Spr_MenuLoading),sprite_get_width(Spr_MenuLoading)*2,sprite_get_height(Spr_MenuLoading)*2)
+        MenuLoadingImage+=1
+        if MenuLoadingImage-1 == sprite_get_number(Spr_MenuLoading) { MenuLoadingImage=0 }
+        }
     if LoadMenu == 1 {
         //Draw the resources on the left section of the menu screen.
         draw_set_color(c_black)
+        draw_set_font(Fn_Info_Medium)
         var _Resources = "Resources :"
         var _Planks = string("Planks : ")+string(global.Planks)
         var _Food = string("Food : ")+string(global.Food)
@@ -51,7 +61,7 @@ if Menu == "Building Selection" {
     //here it will draw the categories.
     draw_set_color(c_black)
     var _Rounds = 0
-    
+    draw_set_font(Fn_Info_Medium)
     repeat 8 {
         draw_rectangle(ViewW-230,ViewH-2.5-25*_Rounds,ViewW-275,ViewH-22.5-25*_Rounds,0) //draw the shape
         _Rounds+=1
@@ -185,20 +195,11 @@ if NotEnough != 0 {
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////// DRAW SELECTED OBJECT ///////////////////////////////////////////////////
 //Draw Selected building
-switch PlaceType {
-	case "House":
-		draw_sprite(Spr_House,0,device_mouse_x_to_gui(0)-sprite_get_width(Spr_House)/2,device_mouse_y_to_gui(0)-sprite_get_height(Spr_House)/2)
-		break;
-	case "Farm":
-		draw_sprite(Spr_Farm,0,device_mouse_x_to_gui(0)-sprite_get_width(Spr_Farm)/2,device_mouse_y_to_gui(0)-sprite_get_height(Spr_Farm)/2)
-		break;
-    case "Mine":
-		draw_sprite(Spr_Mine,0,device_mouse_x_to_gui(0)-sprite_get_width(Spr_Mine)/2,device_mouse_y_to_gui(0)-sprite_get_height(Spr_Mine)/2)
-		break;
-    case "Windmill":
-		draw_sprite(Spr_Windmill,0,device_mouse_x_to_gui(0)-sprite_get_width(Spr_Windmill)/2,device_mouse_y_to_gui(0)-sprite_get_height(Spr_Windmill)/2)
-		break;
-	}
+if PlaceType != "" && Upgrade != 1 {
+    _String = string("Spr_")+string(PlaceType)+string("_T1") 
+    var _Sprite = asset_get_index(_String)
+    draw_sprite(_Sprite,0,device_mouse_x_to_gui(0)-sprite_get_width(_Sprite)/2,device_mouse_y_to_gui(0)-sprite_get_height(_Sprite)/2)
+    }
     
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////// HOVER OVER EVENT TEXT ///////////////////////////////////////////////////

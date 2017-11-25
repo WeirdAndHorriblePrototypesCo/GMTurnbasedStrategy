@@ -7,7 +7,7 @@
 //Login = 4 -> No connection. Asked for an IP.
 
 //Version number
-Version = "Version 2.0"
+Version = "Version 2.1"
 
 
 //Login details
@@ -34,3 +34,15 @@ DrawError2 = 0
 DrawError3 = 0
 DrawError4 = 0
 CreatedAccount = 0
+
+//Useless title settings
+RandomNameAlpha=0
+ChangeNames=0.01
+_Name1 = irandom(2)
+_Name2 = irandom(2)
+if _Name1 = 0 {_Name1 = "Merlijn"}
+if _Name1 = 1 {_Name1 = "Mart"}
+if _Name1 = 2 {_Name1 = "Jorian"}
+if _Name2 = 0 {_Name2 = "Merlijn"}
+if _Name2 = 1 {_Name2 = "Mart"}
+if _Name2 = 2 {_Name2 = "Jorian"}

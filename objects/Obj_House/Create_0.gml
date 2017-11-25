@@ -5,7 +5,7 @@ if Image/2 != floor(Image/2) {
 	}
 image_index=Image
 image_speed=0
-HouseButton1=0
+LocalMenuOpen=0
 Inhabitants=irandom(12)
 Inhabitant[0] = ""
 alarm[0]=1
@@ -21,3 +21,6 @@ HportDraw = view_hport[view_current]
 GainRounds=0
 NextTurn=0
 ShowGain=0
+
+Target = instance_find(Obj_Resource_Manager,0)
+Upgrade = 0

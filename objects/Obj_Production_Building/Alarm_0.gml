@@ -1,20 +1,20 @@
-/// @description sprite&settings for object type.
-
-if Type == "Farm" {
-    sprite_index=Spr_Farm
-    ResourceAmount=1
+/// @description Set correct type.
+// sprite, name etc.
+var _Rounds = 0 
+if Type = "Noone" { alarm[0]=10; exit }
+repeat global.AmountOfBuildings {
+    if ds_map_find_value(global.Buildings[_Rounds],"Name") == Type {
+        var _String = global.Buildings[_Rounds]
+        var _SpriteName = string(ds_map_find_value(_String,"Sprite"))
+        var _Sprite = asset_get_index(_SpriteName)
+        sprite_index = _Sprite
+        DefaultSprite=_SpriteName
+        ResourceAmount = ds_map_find_value(_String,"ResourceAmount")
+        ResourceType = ds_map_find_value(_String,"ResourceType")
+        MaxLoading = ds_map_find_value(_String,"MaxLoading")
+        TierMax = ds_map_find_value(_String,"MaxTier")
+        break;
+        }
+    _Rounds+=1
     }
-if Type == "Mine" {
-    sprite_index=Spr_Mine
-    image_speed=2
-    MaxLoading=3
-    ResourceAmount=2
-    }
-if Type == "Lumberjack" {
-    sprite_index=Spr_Clouds
-    ResourceAmount=1
-    }
-if Type == "Windmill" {
-    sprite_index=Spr_Windmill
-    ResourceAmount=1
-    }
+Tier=1

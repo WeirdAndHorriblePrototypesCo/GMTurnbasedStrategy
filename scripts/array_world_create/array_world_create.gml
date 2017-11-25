@@ -26,7 +26,12 @@ var _Z = 0;
 repeat(z1){
 	repeat(x1){
 		repeat(y1){
-			inner_array[_X,_Y] = irandom_range(1,15); // Fill array with random values
+            if _Z=0 {
+			    inner_array[_X,_Y] = irandom_range(1,63); // Fill array with random values
+                }
+            else {
+                inner_array[_X,_Y] = 0
+                }
 
 			_Y+=1
 			}
@@ -40,3 +45,5 @@ repeat(z1){
 }
 _Z=0;
 return map_array;
+
+

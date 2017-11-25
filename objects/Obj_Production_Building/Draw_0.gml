@@ -29,3 +29,4 @@ if Loading != 0 {
         draw_sprite_stretched(Spr_Loading,floor(sprite_get_number(Spr_Loading)/MaxLoading*Loading), x+sprite_get_width(Spr_Loading)/2, y-12,sprite_get_width(Spr_Loading)/2,sprite_get_height(Spr_Loading)/2)
         }
     }
+    

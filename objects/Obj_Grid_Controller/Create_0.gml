@@ -1,8 +1,13 @@
-/// @description Create the grid
+/// @description Get all tiles.
+
+// ONLY CREATE ME AFTER YOU HAVE GOTTEN ALL THE DATA FROM THE SERVER
+// AND SET ALL THE CORRECT VARIABLES READY. OTHERWISE ILL LAG YA ASS OFF / CRASH.
+// Thou has been warned.
 
 
 //Some debug info :) #Stats #Awesome!
 TilesCreated = 0;
+BuildingsPlaced = 0;
 
 //useful vars
 
@@ -40,19 +45,4 @@ draw_tilemap(tileMap,0,0);
 
 
 show_debug_message(TilesCreated)
-
-/*
-//Old 2d array system
-repeat (array_length_2d(global.WorldArray,0)) {
-	repeat (array_height_2d(global.WorldArray)) {
-		_TerrainType = global.WorldArray[_X,_Y];
-		_id = instance_create_depth(_X*global.GridWidth,_Y*global.GridHeight,1,GridObject);
-		//Setting the frame to the right terrain type
-		_id.image_index = _TerrainType;
-		TilesCreated+=1
-		_Y+=1
-		}
-	_X+=1
-	_Y=0
-	}
-*/
+alarm[0]=10

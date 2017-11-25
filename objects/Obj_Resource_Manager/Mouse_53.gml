@@ -10,40 +10,32 @@ if PlaceType != "" {
         Food=0
         Stone=0
         Workers=0
-        
+
         // If you keep shift pressed, you can place multiple buildings.
         var _Shift = ""
         if keyboard_check(vk_shift) {
             _Shift = PlaceType
             }
         /////////////////////////////    HOUSE       ///////////////////////////////////////////
-        check_costs()
+        check_costs() //<<<<< THE COSTS FOR THE BUILDING <<<<
         if ShortageType != "" { 
             PlaceType = ""
             exit
             }
-		switch PlaceType {
-			case "House":
-				//array_3d_set(2,global.WorldArray,floor(mouse_x/global.GridWidth),floor(mouse_y/global.GridHeight),Place)
-				place_house()
-				break;
-			case "Farm":
-				//array_3d_set(3,global.WorldArray,floor(mouse_x/global.GridWidth),floor(mouse_y/global.GridHeight),Place)
-				place_farm()
-				break;
-            case "Mine":
-                //array_3d_set(3,global.WorldArray,floor(mouse_x/global.GridWidth),floor(mouse_y/global.GridHeight),Place)
-                place_mine()
-                break;
-            case "Lumberjack":
-                //array_3d_set(3,global.WorldArray,floor(mouse_x/global.GridWidth),floor(mouse_y/global.GridHeight),Place)
-                place_lumberjack()
-                break;
-            case "Windmill":
-                //Takes 4 fcking spaces! o.O
-                place_windmill()
-                break;
-			}
+        var _Rounds = 0
+        repeat global.AmountOfBuildings {
+            if ds_map_find_value(global.Buildings[_Rounds],"Name") == PlaceType {
+                var _String = global.Buildings[_Rounds]
+                var _Argument2 = ds_map_find_value(_String,"LayerNumber")
+                }
+            _Rounds+=1
+            }
+        if PlaceType == "House" {
+            place_house(_Argument2)
+            PlaceType=_Shift
+            exit
+            }
+		place_small_building(PlaceType, _Argument2)
 		PlaceType=_Shift
         //}
 	}

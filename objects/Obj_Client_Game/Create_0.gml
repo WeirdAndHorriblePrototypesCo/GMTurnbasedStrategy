@@ -8,8 +8,11 @@ buffer_write(Buffer, buffer_string, "New Player"); //comes back with diff respon
 buffer_write(Buffer, buffer_string, global.Username);
 network_send_packet(Socket, Buffer, buffer_tell(Buffer));
 
+//Get the data from the server.
+StartProgram = 1
+
 //General Client Settings
-global.MenuOpen = 0
+global.MenuOpen = -1
 global.LoadingVisible=0
 
 /////////////////////////////////////////////
@@ -49,7 +52,53 @@ repeat 300 { //The magic number 300 is the amount of buildings that fit into the
     ds_map_add(global.Buildings[_Rounds],"Food",ini_read_real(_Building,"Food",0))
     ds_map_add(global.Buildings[_Rounds],"Stone",ini_read_real(_Building,"Stone",0))
     ds_map_add(global.Buildings[_Rounds],"Workers",ini_read_real(_Building,"Workers",0))
+    ds_map_add(global.Buildings[_Rounds],"MaxTier",ini_read_real(_Building,"MaxTier",0))
+    ds_map_add(global.Buildings[_Rounds],"Sprite",ini_read_string(_Building,"Sprite",0))
+    ds_map_add(global.Buildings[_Rounds],"ResourceType",ini_read_string(_Building,"ResourceType",0))
+    ds_map_add(global.Buildings[_Rounds],"ResourceAmount",ini_read_real(_Building,"ResourceAmount",0))
+    ds_map_add(global.Buildings[_Rounds],"MaxLoading",ini_read_real(_Building,"MaxLoading",0))
+    ds_map_add(global.Buildings[_Rounds],"LayerNumber",ini_read_real(_Building,"LayerNumber",0))
+    ds_map_add(global.Buildings[_Rounds],"ObjectType",ini_read_string(_Building,"ObjectType",0))
     _Rounds+=1
     }
 global.AmountOfBuildings = _Rounds
+
+//Do the same as above, but then for upgrades.
+global.BuildingUpgrades = ds_map_create()
+_Rounds=0
+_String=""
+_Building=""
+repeat ini_read_real("General","AmountOfUpgrades",0) {
+    _Building = string("Building-Upgrade")+string(_Rounds)
+    _String = ini_read_string(_Building,"Name","Error!")
+    global.BuildingUpgrades[_Rounds] = ds_map_create()
+    ds_map_add(global.BuildingUpgrades[_Rounds],"Name",_String)
+    ds_map_add(global.BuildingUpgrades[_Rounds],"Planks",ini_read_real(_Building,"Planks",0))
+    ds_map_add(global.BuildingUpgrades[_Rounds],"Food",ini_read_real(_Building,"Food",0))
+    ds_map_add(global.BuildingUpgrades[_Rounds],"Stone",ini_read_real(_Building,"Stone",0))
+    ds_map_add(global.BuildingUpgrades[_Rounds],"Workers",ini_read_real(_Building,"Workers",0))
+    ds_map_add(global.BuildingUpgrades[_Rounds],"Sprite",ini_read_string(_Building,"Sprite",0))
+    ds_map_add(global.BuildingUpgrades[_Rounds],"ResourceType",ini_read_string(_Building,"ResourceType",0))
+    ds_map_add(global.BuildingUpgrades[_Rounds],"ResourceAmount",ini_read_real(_Building,"ResourceAmount",0))
+    ds_map_add(global.BuildingUpgrades[_Rounds],"MaxLoading",ini_read_real(_Building,"MaxLoading",0))
+    ds_map_add(global.BuildingUpgrades[_Rounds],"LayerNumber",ini_read_real(_Building,"LayerNumber",0))
+    ds_map_add(global.BuildingUpgrades[_Rounds],"ObjectType",ini_read_string(_Building,"ObjectType",0))
+    _Rounds+=1
+    }
+global.AmountOfBuildingUpgrades = _Rounds
 ini_close()
+
+//Start program:
+//      Get terrain map
+if StartProgram == 1 {
+    StartProgram = 0
+    var _Size = 1024;
+    var _Type = buffer_fixed;
+    var _Alignment = 1;
+    BufferTemp = buffer_create(_Size,_Type,_Alignment)
+    buffer_seek(BufferTemp, buffer_seek_start, 0)
+    buffer_write(BufferTemp, buffer_string, "Terrain Map")
+    buffer_write(BufferTemp, buffer_string, global.Username)
+    network_send_packet(Socket, BufferTemp, buffer_tell(BufferTemp));
+    buffer_delete(BufferTemp)
+    }

@@ -152,4 +152,19 @@ if Login == 4 {
 draw_set_font(Fn_Lobby)
 draw_set_color(c_white)
 draw_text(room_width/2-290,100,"Turn Based Strategy")
-draw_text(room_width/2-290,145," By Mart & Merlijn")
+RandomNameAlpha+=ChangeNames
+draw_set_alpha(RandomNameAlpha)
+if RandomNameAlpha == 0 {
+    ChangeNames = 0.01
+    _Name1 = irandom(2)
+    _Name2 = irandom(2)
+    if _Name1 = 0 {_Name1 = "Merlijn"}
+    if _Name1 = 1 {_Name1 = "Mart"}
+    if _Name1 = 2 {_Name1 = "Jorian"}
+    if _Name2 = 0 {_Name2 = "Merlijn"}
+    if _Name2 = 1 {_Name2 = "Mart"}
+    if _Name2 = 2 {_Name2 = "Jorian"}
+    }
+if RandomNameAlpha == 1 { ChangeNames=-0.01 }
+draw_text(room_width/2-string_width(string(" By ")+string(_Name1)+string(" and ")+string(_Name2))/2-30,145,string(" By ")+string(_Name1)+string(" and ")+string(_Name2))
+draw_set_alpha(1)

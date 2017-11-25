@@ -3,7 +3,7 @@
 NotEnough=0
 ShortageType=""
 PlaceBuilding=0
-PlaceType=0
+PlaceType=""
 
 //Building menu.
 Menu = "Building Selection"
@@ -33,7 +33,7 @@ Socket = global.Socket
 
 //Drawing event for resources
 LoadMenu = 0
-alarm[0]=10
+MenuLoadingImage=0
 
 //Categories for drawing:
 Category[0] = "----"
@@ -45,3 +45,7 @@ Category[5] = "Faith"
 Category[6] = "Steel"
 Category[7] = "Basic"
 SelectedMenu = 0
+
+//If another building wants to use this object to upgrade.
+Upgrade = 0
+MenuHeight=10000000
