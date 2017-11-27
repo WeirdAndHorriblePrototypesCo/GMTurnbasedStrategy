@@ -30,11 +30,6 @@ if PlaceType != "" {
                 }
             _Rounds+=1
             }
-        if PlaceType == "House" {
-            place_house(_Argument2)
-            PlaceType=_Shift
-            exit
-            }
 		place_small_building(PlaceType, _Argument2)
 		PlaceType=_Shift
         //}

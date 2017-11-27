@@ -59,6 +59,7 @@ repeat 300 { //The magic number 300 is the amount of buildings that fit into the
     ds_map_add(global.Buildings[_Rounds],"MaxLoading",ini_read_real(_Building,"MaxLoading",0))
     ds_map_add(global.Buildings[_Rounds],"LayerNumber",ini_read_real(_Building,"LayerNumber",0))
     ds_map_add(global.Buildings[_Rounds],"ObjectType",ini_read_string(_Building,"ObjectType",0))
+	ds_map_add(global.Buildings[_Rounds],"Vision",ini_read_string(_Building,"Vision",0))
     _Rounds+=1
     }
 global.AmountOfBuildings = _Rounds
@@ -83,6 +84,7 @@ repeat ini_read_real("General","AmountOfUpgrades",0) {
     ds_map_add(global.BuildingUpgrades[_Rounds],"MaxLoading",ini_read_real(_Building,"MaxLoading",0))
     ds_map_add(global.BuildingUpgrades[_Rounds],"LayerNumber",ini_read_real(_Building,"LayerNumber",0))
     ds_map_add(global.BuildingUpgrades[_Rounds],"ObjectType",ini_read_string(_Building,"ObjectType",0))
+	ds_map_add(global.BuildingUpgrades[_Rounds],"Vision",ini_read_string(_Building,"Vision",0))
     _Rounds+=1
     }
 global.AmountOfBuildingUpgrades = _Rounds
@@ -102,3 +104,4 @@ if StartProgram == 1 {
     network_send_packet(Socket, BufferTemp, buffer_tell(BufferTemp));
     buffer_delete(BufferTemp)
     }
+	

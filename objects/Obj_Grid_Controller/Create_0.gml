@@ -46,3 +46,19 @@ draw_tilemap(tileMap,0,0);
 
 show_debug_message(TilesCreated)
 alarm[0]=10
+
+var _X = 0
+var _Y = 0
+var _Number = 0
+
+//Delete me! (the code below generates crappy fog of war)
+repeat global.WorldHeight/8 {
+	repeat global.WorldWidth/8 {
+		_Number+=1
+		instance_create_depth(_X*global.GridWidth,_Y*global.GridHeight,-10,Temp_Delme)
+		_Y+=1
+		}
+	_Y=0
+	_X+=1
+	}
+show_debug_message(string(_Number)+string(" Number"))

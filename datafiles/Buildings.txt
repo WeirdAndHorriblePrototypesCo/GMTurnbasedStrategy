@@ -21,7 +21,8 @@ ResourceType="Workers"
 ResourceAmount=1
 MaxLoading=1
 LayerNumber=1
-ObjectType="Obj_House"
+ObjectType="Obj_Production_Building"
+Vision=3
 
 [Building1]
 Name="Farm"
@@ -36,6 +37,7 @@ ResourceAmount=1
 MaxLoading=1
 LayerNumber=2
 ObjectType="Obj_Production_Building"
+Vision=3
 
 [Building2]
 Name="Windmill"
@@ -50,6 +52,7 @@ ResourceAmount=5
 MaxLoading=3
 LayerNumber=3
 ObjectType="Obj_Production_Building"
+Vision=3
 
 [Building3]
 Name="Mine"
@@ -64,6 +67,7 @@ ResourceAmount=2
 MaxLoading=3
 LayerNumber=4
 ObjectType="Obj_Production_Building"
+Vision=3
 
 [Building4]
 Name="Well"
@@ -78,6 +82,7 @@ ResourceAmount=2
 MaxLoading=8
 LayerNumber=7
 ObjectType="Obj_Production_Building"
+Vision=3
 
 [Building-Upgrade0]
 Name="House_T2"
@@ -90,7 +95,8 @@ ResourceType="Workers"
 ResourceAmount=3
 MaxLoading=3
 LayerNumber=5
-ObjectType="Obj_House"
+ObjectType="Obj_Production_Building"
+Vision=3
 
 [Building-Upgrade1]
 Name="Farm_T2"
@@ -104,3 +110,4 @@ ResourceAmount=3
 MaxLoading=1
 LayerNumber=6
 ObjectType="Obj_Production_Building"
+Vision=3

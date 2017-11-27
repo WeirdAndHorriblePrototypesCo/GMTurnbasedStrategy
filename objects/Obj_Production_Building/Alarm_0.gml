@@ -13,8 +13,11 @@ repeat global.AmountOfBuildings {
         ResourceType = ds_map_find_value(_String,"ResourceType")
         MaxLoading = ds_map_find_value(_String,"MaxLoading")
         TierMax = ds_map_find_value(_String,"MaxTier")
+		Vision = ds_map_find_value(_String,"Vision")
         break;
         }
     _Rounds+=1
     }
 Tier=1
+
+script_execute(vision,Vision)

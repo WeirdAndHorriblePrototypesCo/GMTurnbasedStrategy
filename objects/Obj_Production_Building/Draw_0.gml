@@ -1,6 +1,6 @@
 /// @description draw stuff
 
-draw_self()
+if sprite_index != -1 { draw_self() }
 if NextTurn == 1 {
 	NextTurn=0
     Loading+=1

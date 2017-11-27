@@ -11,21 +11,6 @@ repeat instance_number(Obj_Clouds) {
 	_Rounds+=1
 	}
     
-/// For each house get a thing ///
-_Rounds=0
-repeat instance_number(Obj_House) {
-    var _Target = instance_find(Obj_House,_Rounds)
-    if _Target.Owner == global.Username {
-        if _Target.sprite_index=Spr_House_T1 { _Food+=1 }
-        if _Target.sprite_index=Spr_House_T2 { _Food+=3 }
-        _Target.NextTurn = 1
-        }
-    _Rounds+=1
-    }
-
-
-
-
 /// For every production building, get a thing ///
 var _Rounds = 0
 repeat instance_number(Obj_Production_Building) {

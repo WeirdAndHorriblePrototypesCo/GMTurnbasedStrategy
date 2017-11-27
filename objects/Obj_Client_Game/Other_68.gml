@@ -37,17 +37,11 @@ switch(_TypeEvent) {
 				script_execute(next_turn)
 				break;
 			case "Login Resources":
-				global.Planks = buffer_read(Buffer, buffer_u32)
-				global.Food = buffer_read(Buffer, buffer_u32)
-				global.Stone = buffer_read(Buffer, buffer_u32)
-				global.Workers = buffer_read(Buffer, buffer_u32)
+				resource_get_server(Buffer)
 				break;
             case "Resources Gained":
                 if global.Username == buffer_read(Buffer,buffer_string) {
-                    global.Planks=buffer_read(Buffer,buffer_u32)
-                    global.Food=buffer_read(Buffer,buffer_u32)
-                    global.Stone=buffer_read(Buffer,buffer_u32)
-                    global.Workers=buffer_read(Buffer,buffer_u32)
+                    resource_get_server(Buffer)
                     break;
                     }
 			case "Wind Direction":

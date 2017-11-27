@@ -22,10 +22,6 @@ repeat (global.WorldWidth) {
                         _Target.Owner = array_world_get(global.WorldArray, _X, _Y, 4)
                         _Target.Type = ds_map_find_value(global.Buildings[_Rounds], "Name")
                         }
-                    if _ObjectType = "Obj_House" {
-                        var _Target = instance_create_depth(_X*global.GridWidth, _Y*global.GridHeight, -9,Obj_House) 
-                        _Target.Owner = array_world_get(global.WorldArray, _X, _Y, 4)
-                        }
             		BuildingsPlaced+=1
                     break;
                     }

@@ -23,3 +23,5 @@ Tier=0
 Target = instance_find(Obj_Resource_Manager,0)
 Upgrade = 0
 DefaultSprite=sprite_index
+
+Vision=0
